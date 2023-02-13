@@ -1,0 +1,44 @@
+nav {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav > * {
+  padding: 0 2rem;
+}
+
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+}
+
+.nav-item {
+  border: 2px solid cyan;
+  width: max-content;
+  padding: 1rem;
+}
+
+.nav-item:hover {
+  background-color: grey;
+}
+
+a {
+  text-decoration: solid;
+}
+
+a:visited {
+  color: white;
+}
+
+.active,
+a:visited.active {
+  color: cyan;
+}
