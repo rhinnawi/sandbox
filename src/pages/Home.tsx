@@ -1,6 +1,8 @@
+import "./Home.css";
+
 export default function Home(): JSX.Element {
   return (
-    <div>
+    <div className="home">
       <p>Welcome home.</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi

@@ -7,27 +7,28 @@ nav {
 
 nav > * {
   padding: 0 2rem;
+  margin: 0;
 }
 
 h1 {
-  margin: 0;
   text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
   flex-flow: row nowrap;
-  height: 100%;
 }
 
 .nav-item {
-  border: 2px solid cyan;
-  width: max-content;
   padding: 1rem;
+  list-style: none;
 }
 
 .nav-item:hover {
-  background-color: grey;
+  background-color: #656e8100;
+  transform: scale(1.25);
+  font-weight: 600;
+  margin: 2px;
 }
 
 a {
@@ -38,7 +39,6 @@ a:visited {
   color: white;
 }
 
-.active,
 a:visited.active {
   color: cyan;
 }

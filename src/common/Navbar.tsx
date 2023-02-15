@@ -14,24 +14,22 @@ export default function NavBar() {
 
   return (
     <nav>
-      <div>
-        <h1>Rani Hinnawi</h1>
-      </div>
+      <h1>Rani Hinnawi</h1>
 
-      <div className="nav-links">
+      <ul className="nav-links">
         {navItems.map(({ page, path }) => {
           return (
-            <div className="nav-item" key={page}>
-              <NavLink
-                to={path}
-                className={({ isActive }) => (isActive ? "active" : undefined)}
-              >
+            <NavLink
+              to={path}
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
+              <li className="nav-item" key={page}>
                 {page}
-              </NavLink>
-            </div>
+              </li>
+            </NavLink>
           );
         })}
-      </div>
+      </ul>
     </nav>
   );
 }
