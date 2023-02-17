@@ -22,10 +22,9 @@ export default function NavBar() {
             <NavLink
               to={path}
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              key={page}
             >
-              <li className="nav-item" key={page}>
-                {page}
-              </li>
+              <li className="nav-item">{page}</li>
             </NavLink>
           );
         })}

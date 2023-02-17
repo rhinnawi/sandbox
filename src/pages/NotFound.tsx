@@ -12,7 +12,7 @@ export default function NotFound(): JSX.Element {
       <h2>This page does not exist.</h2>
       <p>
         {redirectMessage}
-        <Link to="/">Home</Link>
+        <Link to="/">Home.</Link>
       </p>
     </>
   );
