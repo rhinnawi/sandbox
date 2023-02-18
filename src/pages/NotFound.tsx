@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
+import { FunctionComponent, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 // TODO: create timer for countdown function using import { setInterval } from "timers/promises";
 
 type CountdownProps = {
@@ -9,7 +9,23 @@ type CountdownProps = {
 const Countdown: FunctionComponent<CountdownProps> = ({
   startingSeconds,
 }: CountdownProps) => {
-  return <p>Redirecting in {startingSeconds} seconds</p>;
+  const [secondsLeft, setSecondsLeft] = useState(startingSeconds);
+  const navigator = useNavigate();
+
+  useEffect(() => {
+    if (secondsLeft > 0) {
+      const timer = setTimeout(
+        () => setSecondsLeft((secondsLeft) => secondsLeft - 1),
+        1000
+      );
+
+      return () => clearTimeout(timer);
+    } else {
+      navigator("/");
+    }
+  }, [navigator, secondsLeft]);
+
+  return <p>Redirecting Home in {secondsLeft} seconds...</p>;
 };
 
 export default function NotFound(): JSX.Element {
